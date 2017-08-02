@@ -201,10 +201,13 @@
 
                             <div class="tab-content">
                                 <div class="tab-pane" id="details">
-                                    <div class="row">
-                                        <div class="col-sm-12">
 
-                                            <label class="font-weight-bold">Academic level:</label>
+                                    <div class="row">
+                                        <form method="post" class="form-horizontal">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+
+                                                <label><strong>Academic  level:</strong></label>
                                                 <button class="btn btn-primary btn-sm " rel="tooltip" title="This is good tooltip.">High school</button>
                                                 <button class="btn btn-info btn-sm" rel="tooltip" title="This is good tooltip.">College(1-2 year)</button>
                                                 <button class="btn btn-success btn-sm" rel="tooltip" title="This is good tooltip.">College(3-4 year)</button>
@@ -212,11 +215,7 @@
                                                 <button class="btn btn-danger btn-sm" rel="tooltip" title="This is good tooltip.">PhD</button>
 
 
-                                        </div>
-
-
-
-                                        <div class="col-sm-8">
+                                            </div>
 
                                             <div class="form-group ">
                                                 <label class="font-weight-bold"><strong>Type of paper needed:</strong></label>
@@ -262,52 +261,78 @@
                                                     <textarea class="form-control" placeholder="May include paper structures etc" rows="1"></textarea>
 
                                             </div>
+                                            <div class="form-group ">
+                                            <label for="sources">Sources: </label>
+                                                <input style="width: auto" id="sources" type="number" min="0" max="3000" step="1" value ="0"/>
+                                            </div>
+                                            <div class="form-group">
 
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Daily Budget</label>
-                                                <select class="form-control">
-                                                    <option disabled="" selected=""></option>
-                                                    <option value="Afghanistan"> < $100 </option>
-                                                    <option value="Albania"> $100 - $499 </option>
-                                                    <option value="Algeria"> $499 - $999 </option>
-                                                    <option value="American Samoa"> $999+ </option>
-                                                </select>
+                                                <label class="font-weight-bold">Additional materials:</label>
+                                                <button class="btn btn-primary btn-sm " rel="tooltip" title="Click to upload."> <i class="material-icons">backup</i>Upload files<input type="file"></button>
+
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label style="font-size: large;"><strong>Paper format:</strong></label>
+                                                <input type="button" class="btn btn-primary btn-sm" rel="tooltip" title="This is good tooltip." value="MLA">
+                                                <input type="button" class="btn btn-warning btn-sm" rel="tooltip" title="This is good tooltip." value="APA">
+                                                <input type="button" class="btn btn-success btn-sm" rel="tooltip" title="This is good tooltip." value="Chicago/Turabian">
+                                                <input type="button" class="btn btn-info btn-sm" rel="tooltip" title="This is good tooltip."  value="Not Applicable" >
+                                                <input type="button" name="other"  class="btn btn-danger btn-sm" rel="tooltip" title="This is good tooltip." value="Other" onclick="shw()" />
+
+                                                <div class="form-group label-floating" id="ww" style="display: none">
+                                                    <label  class="control-label " id="hidden" ><strong>Your paper format:</strong>:</label>
+                                                    <input name="name" type="text" id="hiddens" class="form-control" placeholder=""  >
+                                                </div>
+                                                <script type="text/javascript">
+                                                    function shw(){
+                                                        document.getElementById('ww').style.display= "block";
+
+                                                    }
+
+                                                </script>
                                             </div>
                                         </div>
+                                    </form>
                                     </div>
+
                                 </div>
                                 <div class="tab-pane" id="captain">
-                                    <h4 class="info-text">What type of room would you want? </h4>
+
                                     <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1">
-                                            <div class="col-sm-4">
-                                                <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
-                                                    <input type="radio" name="job" value="Design">
-                                                    <div class="icon">
-                                                        <i class="material-icons">weekend</i>
-                                                    </div>
-                                                    <h6>Single</h6>
+                                        <form method="post" class="form-horizontal">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+
+                                                    <label><strong>Deadline:</strong></label>
+                                                    <input type="button" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="8hrs">
+                                                    <input type="button" class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="24hrs">
+                                                    <input type="button" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="48hrs">
+                                                    <input type="button" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip."  value="3 days" >
+                                                    <input type="button" name="other"  class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="5 days">
+                                                    <input type="button" name="other"  class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="7 days">
+                                                    <input type="button" name="other"  class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="14 days">
+
                                                 </div>
+                                                <style>
+                                                    #label {
+                                                    display: block;
+                                                    text-align: center;
+                                                    line-height: 150%;
+                                                    font-size: .85em;
+                                                }</style>
+                                                <label class="label">Hint text</label>
+
+
+
                                             </div>
-                                            <div class="col-sm-4">
-                                                <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this room if you're traveling with your family.">
-                                                    <input type="radio" name="job" value="Code">
-                                                    <div class="icon">
-                                                        <i class="material-icons">home</i>
-                                                    </div>
-                                                    <h6>Family</h6>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this option if you are coming with your team.">
-                                                    <input type="radio" name="job" value="Code">
-                                                    <div class="icon">
-                                                        <i class="material-icons">business</i>
-                                                    </div>
-                                                    <h6>Business</h6>
-                                                </div>
-                                            </div>
-                                        </div>
+
+
+
+
+
+
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="description">
@@ -330,7 +355,7 @@
                             </div>
                             <div class="wizard-footer">
                                 <div class="pull-right">
-                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
                                     <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Complete Order' />
                                 </div>
                                 <div class="pull-left">
