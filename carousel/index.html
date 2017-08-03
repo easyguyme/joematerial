@@ -312,20 +312,88 @@
                                                     <input type="button" name="other"  class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="5 days">
                                                     <input type="button" name="other"  class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="7 days">
                                                     <input type="button" name="other"  class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="This is good tooltip." value="14 days">
+                                                    <div class="label1">
+                                                        <label >We estimate that your final submission deadline is %date%</label>
+                                                        <style>
+                                                            .label1 {
+                                                                display: block;
+                                                                text-align: center;
+                                                                line-height: 150%;
+                                                                font-size: .85em;
+                                                            }</style>
+                                                    </div>
 
                                                 </div>
+
+                                                <div class="form-group ">
+                                                    <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <label for="sources"><strong>Pages:</strong></label>
+                                                        <input style="width: auto" id="Pages" type="number" min="0" max="3000" step="1" value ="0"/>
+
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-secondary btn-sm active">
+                                                                <input type="radio" name="options" id="option1" autocomplete="off" checked>Single Spaced
+                                                            </label>
+                                                            <label class="btn btn-secondary btn-sm">
+                                                                <input type="radio" name="options" id="option2" autocomplete="off">double Spaced
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group ">
+                                                    <label for="charts"><strong>Charts:</strong> </label>
+                                                    <input style="width: auto" id="charts" type="number" min="0" max="3000" step="1" value ="0"/>
+                                                </div>
+                                                <div class="form-group ">
+                                                    <label for="Powerpoint"><strong>Power <br>point  slides:</strong>  </label>
+                                                    <input style="width: auto" id="Powerpoint" type="number" min="0" max="3000" step="1" value ="0"/>
+                                                </div>
+                                                <div class="form-group">
+                                                <div class="form-group ">
+
+                                                 <label for="Powerpoint"><strong>Writer category:</strong>  </label>
+                                                 <div class="btn-group" data-toggle="buttons">
+                                                           <label class="btn btn-success btn-group-lg">
+                                                               <h6>Best Available</h6>
+                                                               <hr class="style1">
+                                                               <p style="font-size: x-small;">Standard Price</p>
+                                                            <input type="radio" name="options" id="opt1" autocomplete="off" checked>
+                                                           </label>
+                                                            <label class="btn btn-success btn-group-lg active">
+                                                                <h6>Advanced &nbsp;&nbsp;&nbsp;&nbsp;+25%</h6>
+                                                                <hr class="style1">
+                                                                <p style="font-size:x-small ;">High rank professional <br> writer,proficient in the<br> requested field </p>
+                                                               <input type="radio" name="options" id="opt2" autocomplete="off">
+                                                            </label>
+                                                            <label class="btn btn-success btn-group-lg">
+                                                                <h6>ENL &nbsp;&nbsp;&nbsp;&nbsp;+30%</h6>
+                                                                <hr class="style1">
+                                                                <p style="font-size:x-small ;">English as a native <br>language writer<br>(US,UK,CA,AU writers)</p>
+                                                                 <input type="radio" name="options" id="opt3" autocomplete="off">
+                                                            </label>
                                                 <style>
-                                                    #label {
-                                                    display: block;
-                                                    text-align: center;
-                                                    line-height: 150%;
-                                                    font-size: .85em;
-                                                }</style>
-                                                <label class="label">Hint text</label>
+                                                    hr.style1{
+                                                        border-top: 1px solid #8c8b8b;
+                                                    }
+                                                </style>
+                                                 </div>
+
+
+                                                    </div>
 
 
 
-                                            </div>
+
+                                                </div>
+
+
+                                             </div>
 
 
 
