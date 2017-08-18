@@ -187,12 +187,20 @@
                                     <div class="nav-tabs-wrapper">
                                         <ul class="nav nav-tabs" data-tabs="tabs">
                                             <li class="active">
+                                                <a href="#settings" data-toggle="tab">
+                                                    <i class="material-icons">add_shopping_cart</i>
+                                                    New order
+                                                </a>
+
+                                            </li>
+                                            <li>
                                                 <a href="#order" data-toggle="tab">
                                                     <i class="material-icons">assignment_ind</i>
 
-                                                        Your Orders
+                                                    Your Orders
 
                                                 </a>
+
                                             </li>
                                             <li>
                                                 <a href="#messages" data-toggle="tab">
@@ -200,20 +208,342 @@
                                                     Profile
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="#settings" data-toggle="tab">
-                                                    <i class="material-icons">add_shopping_cart</i>
-                                                    New order
-                                                </a>
 
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="tab-content text-center">
-                                    <div class="tab-pane active" id="order">
+                                    <div class="tab-pane active" id="settings">
+
+
+                                            <div class="col-sm-8 col-sm-offset-1">
+                                                <!--      Wizard container        -->
+                                                <div class="wizard-container">
+                                                    <div class="card wizard-card" data-color="blue" id="wizard">
+                                                        <form action="" method="">
+                                                            <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+                                                            <div class="wizard-header">
+                                                                <h3 class="wizard-title">
+                                                                    Place an order. It's fast, secure, and confidential.
+                                                                </h3>
+                                                                <h5>This information will let us know what you need.</h5>
+                                                            </div>
+                                                            <div class="wizard-navigation">
+                                                                <ul>
+                                                                    <li><a href="#details" data-toggle="tab">1.Paper Details</a></li>
+                                                                    <li><a href="#captain" data-toggle="tab">2.Price Calculation</a></li>
+                                                                    <li><a href="#description" data-toggle="tab">3.Payment Info</a></li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane" id="details">
+
+                                                                    <div class="row">
+                                                                        <form method="post" class="form-horizontal">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="form-group">
+
+                                                                                    <label><strong>Academic  level:</strong></label>
+                                                                                    <input type="button" class="btn btn-primary btn-sm" rel="tooltip" title="High School" value="High school">
+                                                                                    <input type="button" class="btn btn-success btn-sm" rel="tooltip" title="Associate degree studies." value="College(1-2 year)">
+                                                                                    <input type="button" class="btn btn-danger btn-sm" rel="tooltip" title="Bachelor degree studies." value="College(3-4 year)">
+                                                                                    <input type="button" class="btn btn-warning btn-sm" rel="tooltip" title="Masters degree or professional studies." value="Masters">
+                                                                                    <input type="button" class="btn btn-info btn-sm" rel="tooltip" title="PhD or advanced professional studies." value="PhD">
+
+
+                                                                                </div>
+
+                                                                                <div class="form-group label-floating">
+                                                                                    <label class="control-label pull-left"><strong>Type of paper needed:</strong></label>
+
+                                                                                    <select class="form-control">
+                                                                                        <option disabled="" selected=""></option>
+                                                                                        <option value="most popular" class="font-weight-bold" disabled>Most Popular  </option>
+                                                                                        <option value="Adm"> Admission Essay </option>
+                                                                                        <option value="Article"> Article review </option>
+                                                                                        <option value="business"> Business Plan </option>
+                                                                                        <option value="creative"> Creative Writing </option>
+                                                                                        <option value="Memo"> Memo </option>
+                                                                                        <option value="Term paper"> Term paper </option>
+                                                                                        <option value="Summary"> Summary </option>
+                                                                                        <option value="...">...</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group label-floating ">
+                                                                                    <label class="font-weight-bold control-label"><strong>Subject or discipline:</strong></label>
+
+                                                                                    <select class="form-control label-floating">
+                                                                                        <option disabled="" selected=""></option>
+                                                                                        <option value="most popular" class="font-weight-bold" disabled>Most Popular  </option>
+                                                                                        <option value="bus"> Business Studies </option>
+                                                                                        <option value="English"> English 101 </option>
+                                                                                        <option value="mangt"> Management </option>
+                                                                                        <option value="nursing"> Nursing </option>
+                                                                                        <option value="most popular" class="font-weight-bold" disabled>Humanities  </option>
+                                                                                        <option value="bus"> Business Studies </option>
+                                                                                        <option value="English"> English 101 </option>
+                                                                                        <option value="mangt"> Management </option>
+                                                                                        <option value="...">...</option>
+                                                                                    </select>
+                                                                                </div>
+
+                                                                                <div class="form-group label-floating">
+                                                                                    <label class="control-label "><strong>Topic</strong>:</label>
+                                                                                    <input name="name" type="text" class="form-control" placeholder="">
+                                                                                </div>
+                                                                                <div class="form-group label-floating ">
+
+                                                                                    <label class="control-label" ><strong>Paper instructions:</strong>(May include paper structures etc)</label>
+                                                                                    <textarea class="form-control" placeholder="" rows="3"></textarea>
+
+                                                                                </div>
+                                                                                <div class="form-group label-floating ">
+                                                                                    <label class="control-label" style="position:relative;left: 25px; font-size: 15px;" for="sources"><strong>Sources:</strong> </label>
+                                                                                    <input style="position:relative;left: 2px;font-size: large;" id="sources" class="form-control" type="number" min="0" max="3000" step="1" value ="0"/>
+                                                                                </div>
+                                                                                <div class="form-group">
+
+                                                                                    <label class="font-weight-bold"><strong>Additional materials:</strong></label>
+                                                                                    <button class="btn btn-primary btn-sm " rel="tooltip" title="Click to upload."> <i class="material-icons">backup</i>Upload files<input type="file"></button>
+
+                                                                                </div>
+                                                                                <div class="form-group">
+
+                                                                                    <label><strong>Paper format:</strong></label>
+                                                                                    <input type="button" class="btn btn-primary btn-sm" rel="tooltip" title="MLA." value="MLA">
+                                                                                    <input type="button" class="btn btn-warning btn-sm" rel="tooltip" title="APA." value="APA">
+                                                                                    <input type="button" class="btn btn-success btn-sm" rel="tooltip" title="Chicago/Turabian" value="Chicago/Turabian">
+                                                                                    <input type="button" class="btn btn-info btn-sm" rel="tooltip" title="Not Applicable."  value="Not Applicable" >
+                                                                                    <input type="button" name="other"  class="btn btn-danger btn-sm" rel="tooltip" title="Input your paper format." value="Other" onclick="shw()" />
+
+                                                                                    <div class="form-group label-floating" id="ww" style="display: none">
+                                                                                        <label  class="control-label " id="hidden" ><strong>Your paper format:</strong></label>
+                                                                                        <input name="name" type="text" id="hiddens" class="form-control" placeholder=""  >
+                                                                                    </div>
+                                                                                    <script type="text/javascript">
+                                                                                        function shw(){
+                                                                                            document.getElementById('ww').style.display= "block";
+
+                                                                                        }
+
+                                                                                    </script>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="tab-pane" id="captain">
+
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group">
+
+                                                                                <label><strong>Deadline:</strong></label>
+                                                                                <input type="button" class="btn btn-primary btn-sm" rel="tooltip" data-placement="top" title="$25.00 per page" value="8hrs">
+                                                                                <input type="button" class="btn btn-warning btn-sm" rel="tooltip" data-placement="top" title="$22.00 per page." value="24hrs">
+                                                                                <input type="button" class="btn btn-success btn-sm" rel="tooltip" data-placement="top" title="$19.00 per page." value="48hrs">
+                                                                                <input type="button" class="btn btn-info btn-sm" rel="tooltip" data-placement="top" title="$16.00 per page."  value="3 days" >
+                                                                                <input type="button" name="other"  class="btn btn-primary btn-sm" rel="tooltip" data-placement="top" title="$15.00 per page." value="5 days">
+                                                                                <input type="button" name="other"  class="btn btn-warning btn-sm" rel="tooltip" data-placement="top" title="$12.00 per page." value="7 days">
+                                                                                <input type="button" name="other"  class="btn btn-success btn-sm" rel="tooltip" data-placement="top" title="$10.00 per page." value="14 days"> <div class="label1">
+                                                                                <label >We estimate that your final submission deadline is %date% at %time%</label>
+                                                                                <style>
+                                                                                    .label1 {
+                                                                                        display: block;
+                                                                                        text-align: center;
+                                                                                        line-height: 150%;
+                                                                                        font-size: .85em;
+                                                                                    }</style>
+                                                                            </div>
+
+                                                                            </div>
+
+                                                                            <div class="form-group ">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-3">
+                                                                                        <label for="sources"><strong>Pages:</strong></label>
+                                                                                        <input style="position: relative;" id="Pages" type="number" class="form-control" min="0" max="3000" step="1" value ="0"/>
+
+                                                                                    </div>
+                                                                                    <div class="col-sm-9">
+                                                                                        <div class="btn-group" data-toggle="buttons">
+                                                                                            <label class="btn btn-secondary btn-sm active">
+                                                                                                <input type="radio" name="options" id="option1" autocomplete="off" checked>Single Spaced
+                                                                                            </label>
+                                                                                            <label class="btn btn-secondary btn-sm ">
+                                                                                                <input type="radio" name="options" id="option2" autocomplete="off">double Spaced
+                                                                                            </label>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group label-floating ">
+                                                                                <label class="control-label" style="position:relative;left: 25px; font-size: 14px;" for="charts"><strong>Charts:</strong> </label>
+                                                                                <input style="position:relative;left: 2px;font-size: large;" id="charts" class="form-control" type="number" min="0" max="3000" step="1" value ="0"/>
+                                                                            </div>
+                                                                            <div class="form-group label-floating ">
+                                                                                <label class="control-label" style="position:relative;left: 25px; font-size: 14px;" for="power"><strong>Powerpoint  slides:</strong> </label>
+                                                                                <input style="position:relative;left: 2px;font-size: large;" id="power" class="form-control" type="number" min="0" max="3000" step="1" value ="0"/>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <div class="form-group ">
+
+                                                                                    <label for="Powerpoint"><strong>Writer category:</strong>  </label>
+                                                                                    <div class="btn-group" data-toggle="buttons">
+                                                                                        <label  class="btn btn-secondary btn-group-lg active">
+                                                                                            <h6>Best Available</h6>
+                                                                                            <hr class="style1">
+                                                                                            <p style="font-size: x-small;">Standard Price</p>
+                                                                                            <hr>
+                                                                                            <input type="radio" name="options" id="opt1" autocomplete="off" checked>
+                                                                                        </label>
+                                                                                        <label class="btn btn-secondary btn-group-lg ">
+                                                                                            <h6>Advanced &nbsp;&nbsp;&nbsp;&nbsp;+25%</h6>
+                                                                                            <hr class="style1">
+                                                                                            <p style="font-size:x-small ;">High rank professional <br> writer,proficient in the<br> requested field </p>
+                                                                                            <input type="radio" name="options" id="opt2" autocomplete="off">
+                                                                                        </label>
+                                                                                        <label class="btn btn-secondary btn-group-lg">
+                                                                                            <h6>ENL &nbsp;&nbsp;&nbsp;&nbsp;+30%</h6>
+                                                                                            <hr class="style1">
+                                                                                            <p style="font-size:x-small ;">English as a native <br>language writer<br>(US,UK,CA,AU writers)</p>
+                                                                                            <input type="radio" name="options" id="opt3" autocomplete="off">
+                                                                                        </label>
+                                                                                        <style>
+                                                                                            hr.style1{
+                                                                                                border-top: 1px solid #8c8b8b;
+
+                                                                                            }
+                                                                                        </style>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="Powerpoint"><strong>Additional services:</strong>  </label>
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                        <tr>
+
+                                                                                        </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                        <tr>
+                                                                                            <td class="text-left">
+                                                                                                <div class="checkbox">
+                                                                                                    <label>
+                                                                                                        <input type="checkbox" name="optionsCheckboxes">
+                                                                                                        Get Writer Samples
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td></td>
+                                                                                            <td></td>
+                                                                                            <td></td>
+                                                                                            <td class="text-right"></td>
+                                                                                            <td class="text-right">&dollar; 5.00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="text-left">
+                                                                                                <div class="checkbox">
+                                                                                                    <label>
+                                                                                                        <input type="checkbox" name="optionsCheckboxes">
+                                                                                                        Get Copy of Sources
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td></td>
+                                                                                            <td></td>
+                                                                                            <td></td>
+                                                                                            <td class="text-right"></td>
+                                                                                            <td class="text-right">&dollar; 14.95</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td class="text-left">
+                                                                                                <div class="checkbox">
+                                                                                                    <label>
+                                                                                                        <input type="checkbox" name="optionsCheckboxes" disabled>
+                                                                                                        Progressive Delivery
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td></td>
+                                                                                            <td></td>
+                                                                                            <td></td>
+                                                                                            <td class="text-right"></td>
+                                                                                            <td class="text-right"> +10%</td>
+                                                                                        </tr>
+                                                                                        <tr>
+
+                                                                                        </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+
+
+                                                                                </div>
+
+
+                                                                            </div>
+
+
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane" id="description">
+                                                                    <div class="row">
+
+                                                                        <div class="section  section-signup ">
+                                                                            <div class="container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-4 ">
+                                                                                        <div class="card card-signup">
+                                                                                            <form class="form" method="" action="">
+                                                                                                <div class="header header-danger text-center">
+
+                                                                                                   <h5>Your email is you@what.com</h5>
+                                                                                                </div>
+
+                                                                                            </form>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wizard-footer">
+                                                                <div class="pull-right">
+                                                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+
+                                                                    <button class="btn btn-finish btn-success btn-fill  btn-wd">Complete Order</button>
+                                                                </div>
+                                                                <div class="pull-left">
+                                                                    <input type='button' class='btn btn-previous btn-fill btn-warning btn-wd' name='previous' value='Previous' />
+
+
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div> <!-- wizard container -->
+                                            </div>
+
+
+                                    </div>
+                                    <div class="tab-pane " id="order">
                                         <h3 style="text-decoration: underline;font-weight: bold;" >Active orders</h3>
                                         <p style="font-style: italic"> There are no orders yet. </p>
                                         <hr>
@@ -320,386 +650,8 @@
                                         <!-- end container -->
 
                                     </div>
-                                    <div class="tab-pane" id="settings">
-
-                                            <div class="col-sm-8">
-                                                <!--      Wizard container        -->
-                                                <div class="wizard-container">
-                                                    <div class="card wizard-card" data-color="green" id="wizard">
-                                                        <form action="" method="">
-                                                            <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
-
-                                                            <div class="wizard-header">
-                                                                <h3 class="wizard-title">
-                                                                    Place an order. It's fast, secure, and confidential.
-                                                                </h3>
-                                                                <h5>This information will let us know what you need.</h5>
-                                                            </div>
-                                                            <div class="wizard-navigation">
-                                                                <ul>
-                                                                    <li><a href="#details" data-toggle="tab">1.Paper Details</a></li>
-                                                                    <li><a href="#captain" data-toggle="tab">2.Price Calculation</a></li>
-                                                                    <li><a href="#description" data-toggle="tab">3.Payment Info</a></li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="tab-content">
-                                                                <div class="tab-pane" id="details">
-
-                                                                    <div class="row">
-                                                                        <form method="post" class="form-horizontal">
-
-                                                                                <div class="form-group">
-
-                                                                                    <label><strong>Academic  level:</strong></label>
-                                                                                    <input type="button" class="btn btn-primary btn-sm" rel="tooltip" title="High School" value="High school">
-                                                                                    <input type="button" class="btn btn-success btn-sm" rel="tooltip" title="Associate degree studies." value="College(1-2 year)">
-                                                                                    <input type="button" class="btn btn-danger btn-sm" rel="tooltip" title="Bachelor degree studies." value="College(3-4 year)">
-                                                                                    <input type="button" class="btn btn-warning btn-sm" rel="tooltip" title="Masters degree or professional studies." value="Masters">
-                                                                                    <input type="button" class="btn btn-info btn-sm" rel="tooltip" title="PhD or advanced professional studies." value="PhD">
 
 
-                                                                                </div>
-
-                                                                                <div class="form-group ">
-                                                                                    <label style="position: relative; right: 10px;"><strong>Type of paper needed:</strong></label>
-
-                                                                                    <select class="form-control" style="width: auto;">
-                                                                                        <option disabled="" selected=""></option>
-                                                                                        <option value="most popular" class="font-weight-bold" disabled>Most Popular  </option>
-                                                                                        <option value="Adm"> Admission Essay </option>
-                                                                                        <option value="Article"> Article review </option>
-                                                                                        <option value="business"> Business Plan </option>
-                                                                                        <option value="creative"> Creative Writing </option>
-                                                                                        <option value="Memo"> Memo </option>
-                                                                                        <option value="Term paper"> Term paper </option>
-                                                                                        <option value="Summary"> Summary </option>
-                                                                                        <option value="...">...</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="form-group ">
-                                                                                    <label class="font-weight-bold"><strong>Subject or discipline:</strong></label>
-
-                                                                                    <select class="form-control">
-                                                                                        <option disabled="" selected=""></option>
-                                                                                        <option value="most popular" class="font-weight-bold" disabled>Most Popular  </option>
-                                                                                        <option value="bus"> Business Studies </option>
-                                                                                        <option value="English"> English 101 </option>
-                                                                                        <option value="mangt"> Management </option>
-                                                                                        <option value="nursing"> Nursing </option>
-                                                                                        <option value="most popular" class="font-weight-bold" disabled>Humanities  </option>
-                                                                                        <option value="bus"> Business Studies </option>
-                                                                                        <option value="English"> English 101 </option>
-                                                                                        <option value="mangt"> Management </option>
-                                                                                        <option value="...">...</option>
-                                                                                    </select>
-                                                                                </div>
-
-                                                                                <div class="form-group label-floating">
-                                                                                    <label class="control-label "><strong>Topic</strong>:</label>
-                                                                                    <input name="name" type="text" class="form-control" placeholder="">
-                                                                                </div>
-                                                                                <div class="form-group ">
-
-                                                                                    <label ><strong>Paper instructions:</strong></label>
-                                                                                    <textarea class="form-control" placeholder="May include paper structures etc" rows="1"></textarea>
-
-                                                                                </div>
-                                                                                <div class="form-group ">
-                                                                                    <label for="sources">Sources: </label>
-                                                                                    <input style="width: auto" id="sources" class="form-control" type="number" min="0" max="3000" step="1" value ="0"/>
-                                                                                </div>
-                                                                                <div class="form-group">
-
-                                                                                    <label class="font-weight-bold">Additional materials:</label>
-                                                                                    <button class="btn btn-primary btn-sm " rel="tooltip" title="Click to upload."> <i class="material-icons">backup</i>Upload files<input type="file"></button>
-
-                                                                                </div>
-                                                                                <div class="form-group">
-
-                                                                                    <label><strong>Paper format:</strong></label>
-                                                                                    <input type="button" class="btn btn-primary btn-sm" rel="tooltip" title="MLA." value="MLA">
-                                                                                    <input type="button" class="btn btn-warning btn-sm" rel="tooltip" title="APA." value="APA">
-                                                                                    <input type="button" class="btn btn-success btn-sm" rel="tooltip" title="Chicago/Turabian" value="Chicago/Turabian">
-                                                                                    <input type="button" class="btn btn-info btn-sm" rel="tooltip" title="Not Applicable."  value="Not Applicable" >
-                                                                                    <input type="button" name="other"  class="btn btn-danger btn-sm" rel="tooltip" title="Input your paper format." value="Other" onclick="shw()" />
-
-                                                                                    <div class="form-group label-floating" id="ww" style="display: none">
-                                                                                        <label  class="control-label " id="hidden" ><strong>Your paper format:</strong>:</label>
-                                                                                        <input name="name" type="text" id="hiddens" class="form-control" placeholder=""  >
-                                                                                    </div>
-                                                                                    <script type="text/javascript">
-                                                                                        function shw(){
-                                                                                            document.getElementById('ww').style.display= "block";
-
-                                                                                        }
-
-                                                                                    </script>
-                                                                                </div>
-
-                                                                        </form>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="tab-pane" id="captain">
-
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <div class="form-group">
-
-                                                                                <label><strong>Deadline:</strong></label>
-                                                                                <input type="button" class="btn btn-primary btn-sm" rel="tooltip" data-placement="top" title="$25.00 per page" value="8hrs">
-                                                                                <input type="button" class="btn btn-warning btn-sm" rel="tooltip" data-placement="top" title="$22.00 per page." value="24hrs">
-                                                                                <input type="button" class="btn btn-success btn-sm" rel="tooltip" data-placement="top" title="$19.00 per page." value="48hrs">
-                                                                                <input type="button" class="btn btn-info btn-sm" rel="tooltip" data-placement="top" title="$16.00 per page."  value="3 days" >
-                                                                                <input type="button" name="other"  class="btn btn-primary btn-sm" rel="tooltip" data-placement="top" title="$15.00 per page." value="5 days">
-                                                                                <input type="button" name="other"  class="btn btn-warning btn-sm" rel="tooltip" data-placement="top" title="$12.00 per page." value="7 days">
-                                                                                <input type="button" name="other"  class="btn btn-success btn-sm" rel="tooltip" data-placement="top" title="$10.00 per page." value="14 days"> <div class="label1">
-                                                                                <label >We estimate that your final submission deadline is %date% at %time%</label>
-                                                                                <style>
-                                                                                    .label1 {
-                                                                                        display: block;
-                                                                                        text-align: center;
-                                                                                        line-height: 150%;
-                                                                                        font-size: .85em;
-                                                                                    }</style>
-                                                                            </div>
-
-                                                                            </div>
-
-                                                                            <div class="form-group ">
-                                                                                <div class="row">
-                                                                                    <div class="col-sm-3">
-                                                                                        <label for="sources"><strong>Pages:</strong></label>
-                                                                                        <input style="width: auto" id="Pages" type="number" class="form-control" min="0" max="3000" step="1" value ="0"/>
-
-                                                                                    </div>
-                                                                                    <div class="col-sm-6">
-                                                                                        <div class="btn-group" data-toggle="buttons">
-                                                                                            <label class="btn btn-secondary btn-sm active">
-                                                                                                <input type="radio" name="options" id="option1" autocomplete="off" checked>Single Spaced
-                                                                                            </label>
-                                                                                            <label class="btn btn-secondary btn-sm ">
-                                                                                                <input type="radio" name="options" id="option2" autocomplete="off">double Spaced
-                                                                                            </label>
-
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="form-group ">
-                                                                                <label for="charts"><strong>Charts:</strong> </label>
-                                                                                <input style="width: auto" id="charts" class="form-control" type="number" min="0" max="3000" step="1" value ="0"/>
-                                                                            </div>
-                                                                            <div class="form-group ">
-                                                                                <label for="Powerpoint"><strong>Power <br>point  slides:</strong>  </label>
-                                                                                <input style="width: auto" id="Powerpoint" type="number" class="form-control" min="0" max="3000" step="1" value ="0"/>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <div class="form-group ">
-
-                                                                                    <label for="Powerpoint"><strong>Writer category:</strong>  </label>
-                                                                                    <div class="btn-group" data-toggle="buttons">
-                                                                                        <label class="btn btn-secondary btn-group-lg active">
-                                                                                            <h6>Best Available</h6>
-                                                                                            <hr class="style1">
-                                                                                            <p style="font-size: x-small;">Standard Price</p>
-                                                                                            <hr>
-                                                                                            <input type="radio" name="options" id="opt1" autocomplete="off" checked>
-                                                                                        </label>
-                                                                                        <label class="btn btn-secondary btn-group-lg ">
-                                                                                            <h6>Advanced &nbsp;&nbsp;&nbsp;&nbsp;+25%</h6>
-                                                                                            <hr class="style1">
-                                                                                            <p style="font-size:x-small ;">High rank professional <br> writer,proficient in the<br> requested field </p>
-                                                                                            <input type="radio" name="options" id="opt2" autocomplete="off">
-                                                                                        </label>
-                                                                                        <label class="btn btn-secondary btn-group-lg">
-                                                                                            <h6>ENL &nbsp;&nbsp;&nbsp;&nbsp;+30%</h6>
-                                                                                            <hr class="style1">
-                                                                                            <p style="font-size:x-small ;">English as a native <br>language writer<br>(US,UK,CA,AU writers)</p>
-                                                                                            <input type="radio" name="options" id="opt3" autocomplete="off">
-                                                                                        </label>
-                                                                                        <style>
-                                                                                            hr.style1{
-                                                                                                border-top: 1px solid #8c8b8b;
-                                                                                            }
-                                                                                        </style>
-                                                                                    </div>
-
-
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="Powerpoint"><strong>Additional services:</strong>  </label>
-                                                                                    <table class="table">
-                                                                                        <thead>
-                                                                                        <tr>
-
-                                                                                        </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                        <tr>
-                                                                                            <td class="text-left">
-                                                                                                <div class="checkbox">
-                                                                                                    <label>
-                                                                                                        <input type="checkbox" name="optionsCheckboxes">
-                                                                                                        Get Writer Samples
-                                                                                                    </label>
-                                                                                                </div>
-                                                                                            </td>
-                                                                                            <td></td>
-                                                                                            <td></td>
-                                                                                            <td></td>
-                                                                                            <td class="text-right"></td>
-                                                                                            <td class="text-right">&dollar; 5.00</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td class="text-left">
-                                                                                                <div class="checkbox">
-                                                                                                    <label>
-                                                                                                        <input type="checkbox" name="optionsCheckboxes">
-                                                                                                        Get Copy of Sources
-                                                                                                    </label>
-                                                                                                </div>
-                                                                                            </td>
-                                                                                            <td></td>
-                                                                                            <td></td>
-                                                                                            <td></td>
-                                                                                            <td class="text-right"></td>
-                                                                                            <td class="text-right">&dollar; 14.95</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td class="text-left">
-                                                                                                <div class="checkbox">
-                                                                                                    <label>
-                                                                                                        <input type="checkbox" name="optionsCheckboxes" disabled>
-                                                                                                        Progressive Delivery
-                                                                                                    </label>
-                                                                                                </div>
-                                                                                            </td>
-                                                                                            <td></td>
-                                                                                            <td></td>
-                                                                                            <td></td>
-                                                                                            <td class="text-right"></td>
-                                                                                            <td class="text-right"> +10%</td>
-                                                                                        </tr>
-                                                                                        <tr>
-
-                                                                                        </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-
-
-                                                                                </div>
-
-
-                                                                            </div>
-
-
-                                                                        </div>
-
-
-                                                                    </div>
-                                                                </div>
-                                                                <div class="tab-pane" id="description">
-                                                                    <div class="row">
-
-                                                                        <div class="section  section-signup ">
-                                                                            <div class="container">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-4 ">
-                                                                                        <div class="card card-signup">
-                                                                                            <form class="form" method="" action="">
-                                                                                                <div class="header header-primary text-center">
-                                                                                                    <h4>Sign Up</h4>
-                                                                                                    <div class="social-line">
-                                                                                                        <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                                                                                            <i class="fa fa-facebook-square"></i>
-                                                                                                        </a>
-                                                                                                        <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                                                                                            <i class="fa fa-twitter"></i>
-                                                                                                        </a>
-                                                                                                        <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                                                                                            <i class="fa fa-google-plus"></i>
-                                                                                                        </a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <p class="text-divider">Or Be Classical</p>
-                                                                                                <div class="content">
-
-                                                                                                    <div class="input-group">
-                                                                    <span class="input-group-addon">
-                                                                        <i class="material-icons">face</i>
-                                                                    </span>
-                                                                                                        <input name="name" type="text" class="form-control" placeholder="Username">
-
-                                                                                                    </div>
-
-                                                                                                    <div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">email</i>
-										</span>
-                                                                                                        <input type="text" class="form-control" placeholder="Email...">
-                                                                                                    </div>
-
-                                                                                                    <div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-                                                                                                        <input type="password" placeholder="Password..." class="form-control" />
-                                                                                                    </div>
-
-                                                                                                    <!-- If you want to add a checkbox to this form, uncomment this code
-
-                                                                                                    <div class="checkbox">
-                                                                                                        <label>
-                                                                                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                                                                                            Subscribe to newsletter
-                                                                                                        </label>
-                                                                                                    </div> -->
-                                                                                                </div>
-                                                                                                <div class="footer text-center" style="text-align: center;">
-                                                                                                    <a href="#pablo" class="btn btn-primary btn-lg">Get Started</a>
-
-                                                                                                </div>
-                                                                                                <p class="text-center">
-                                                                                                    Already signed up?
-                                                                                                </p>
-                                                                                                <div class="text-center">
-                                                                                                    <a class="btn btn-success big-login btn-sm" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
-                                                                                                </div>
-
-                                                                                            </form>
-                                                                                        </div>
-
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="wizard-footer">
-                                                                <div class="pull-right">
-                                                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
-
-                                                                    <button class="btn btn-finish btn-success btn-fill  btn-wd">Complete Order</button>
-                                                                </div>
-                                                                <div class="pull-left">
-                                                                    <input type='button' class='btn btn-previous btn-fill btn-warning btn-wd' name='previous' value='Previous' />
-
-
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div> <!-- wizard container -->
-                                            </div>
-                                        <div class="col-sm-2"></div>
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
